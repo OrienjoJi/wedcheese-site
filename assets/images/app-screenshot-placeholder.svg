@@ -1,0 +1,26 @@
+<svg width="960" height="1260" viewBox="0 0 960 1260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="1260" rx="48" fill="#FFF8EB"/>
+  <rect x="64" y="56" width="832" height="1148" rx="40" fill="#FFFFFF" stroke="#E8DDD6" stroke-width="4"/>
+  <rect x="120" y="126" width="220" height="34" rx="17" fill="#FFF1E3"/>
+  <rect x="120" y="194" width="720" height="112" rx="28" fill="#573A45"/>
+  <rect x="160" y="232" width="214" height="18" rx="9" fill="#FFFBF3" fill-opacity="0.78"/>
+  <rect x="160" y="266" width="328" height="18" rx="9" fill="#FFFBF3" fill-opacity="0.42"/>
+  <rect x="580" y="226" width="164" height="48" rx="24" fill="#F9B527"/>
+  <rect x="120" y="356" width="240" height="260" rx="28" fill="#FCE5BE"/>
+  <rect x="390" y="356" width="450" height="124" rx="28" fill="#FFF1E3"/>
+  <rect x="390" y="500" width="450" height="116" rx="28" fill="#F5EFE7"/>
+  <rect x="120" y="662" width="720" height="62" rx="31" fill="#FFF8EB" stroke="#E8DDD6" stroke-width="4"/>
+  <rect x="120" y="760" width="340" height="314" rx="30" fill="#FFF1E3"/>
+  <rect x="500" y="760" width="340" height="314" rx="30" fill="#F5EFE7"/>
+  <circle cx="235" cy="468" r="68" fill="#573A45" fill-opacity="0.12"/>
+  <path d="M229.541 444.988C237.228 431.736 256.372 431.736 264.059 444.988L270.133 455.458C272.935 460.288 277.419 463.934 282.745 465.697L294.286 469.518C308.89 474.353 312.977 492.563 301.858 503.038L293.074 511.314C289.019 515.134 286.996 520.626 287.594 526.162L288.889 538.15C290.528 553.319 275.041 564.279 261.033 558.049L249.956 553.123C244.839 550.847 238.761 550.847 233.644 553.123L222.567 558.049C208.559 564.279 193.072 553.319 194.711 538.15L196.006 526.162C196.604 520.626 194.581 515.134 190.526 511.314L181.742 503.038C170.623 492.563 174.71 474.353 189.314 469.518L200.855 465.697C206.181 463.934 210.665 460.288 213.467 455.458L219.541 444.988H229.541Z" fill="#F9B527"/>
+  <rect x="548" y="804" width="166" height="18" rx="9" fill="#D6C5CB"/>
+  <rect x="548" y="844" width="196" height="18" rx="9" fill="#E4D7DB"/>
+  <rect x="548" y="884" width="144" height="18" rx="9" fill="#E4D7DB"/>
+  <rect x="548" y="954" width="244" height="60" rx="30" fill="#573A45"/>
+  <rect x="168" y="804" width="166" height="18" rx="9" fill="#D6C5CB"/>
+  <rect x="168" y="844" width="196" height="18" rx="9" fill="#E4D7DB"/>
+  <rect x="168" y="884" width="144" height="18" rx="9" fill="#E4D7DB"/>
+  <rect x="168" y="954" width="190" height="60" rx="30" fill="#F9B527"/>
+  <text x="120" y="1148" fill="#7A6670" font-family="Poppins, Arial, sans-serif" font-size="34">App preview placeholder</text>
+</svg>
