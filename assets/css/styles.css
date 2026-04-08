@@ -259,6 +259,26 @@ a.button {
   font-size: clamp(2.65rem, 6vw, 4.7rem);
 }
 
+/* AI word + sparkle icon in hero headline */
+.ai-word {
+  position: relative;
+  white-space: nowrap;
+}
+
+.ai-sparkle {
+  width: 0.55em;
+  height: 0.55em;
+  vertical-align: super;
+  margin-left: 0.04em;
+  color: var(--color-accent);
+  filter: drop-shadow(0 0 3px rgba(249, 181, 39, 0.45));
+}
+
+/* Accent-colored inline text */
+.text-accent {
+  color: var(--color-accent);
+}
+
 .hero p {
   margin: 0;
   max-width: 38rem;
