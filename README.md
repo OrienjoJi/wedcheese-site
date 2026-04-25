@@ -7,6 +7,7 @@ This folder contains a lightweight static website for `www.wedcheese.com`.
 - `index.html`: landing page
 - `privacy-policy.html`: privacy policy
 - `terms-of-service.html`: terms of service
+- `support.html`: public support contact page
 - `data-deletion.html`: public data deletion instructions
 - `privacy/index.html`: compatibility route for `/privacy`
 - `terms/index.html`: compatibility route for `/terms`
