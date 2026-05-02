@@ -31,6 +31,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.wedcheese.com/blog/12-month-wedding-checklist/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/awkward-wedding-emails/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/cut-wedding-guest-list/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/negotiate-wedding-vendors/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-budget-breakdown/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.wedcheese.com/blog/ai-wedding-planner-budget-and-guests/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
