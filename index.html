@@ -9,6 +9,8 @@
     <meta name="description" content="Wedcheese is an AI wedding planner app with a smart wedding budget tracker and digital guest list manager—plan checklists, vendors, decor, and timelines with AI help in one calm workspace." />
     <meta name="keywords" content="AI wedding planner app, smart wedding budget tracker, digital guest list manager, Wedcheese, wedding planning app" />
     <link rel="canonical" href="https://www.wedcheese.com/" />
+    <link rel="alternate" hreflang="en-gb" href="https://www.wedcheese.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.wedcheese.com/" />
 
     <!-- Open Graph (Facebook, LinkedIn, iMessage, WhatsApp) -->
     <meta property="og:type" content="website" />
@@ -66,7 +68,72 @@
     }
     </script>
 
-    <!-- Google Analytics: uncomment and paste your GA4 measurement ID below -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Wedcheese",
+      "legalName": "Orienjo Ltd.",
+      "url": "https://www.wedcheese.com",
+      "logo": "https://www.wedcheese.com/assets/images/wedcheese-logo.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "admin@orienjo.com",
+        "contactType": "customer support"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Wedcheese free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Wedcheese is free to download and use. You get access to budgets, guest lists, vendors, checklists, decor planning, timelines, and a limited number of daily AI questions at no cost. Premium unlocks more AI capacity for active planning weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the AI wedding planner actually do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AI reads your wedding profile, budget, guest list, and vendor team, then proposes structured changes you review and approve. It can build checklists, adjust budgets, search vendors, draft emails, create day-of timelines, and suggest decor ideas — all from one conversation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the digital guest list manager work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add guests with RSVP status, plus-ones, children, dietary notes, categories, and contact details. Wedcheese generates guest-specific RSVP links and connects headcount changes to your budget automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track my wedding budget inside Wedcheese?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The smart wedding budget tracker lets you create custom categories, log deposits and balances, and see how guest-count changes affect spending. AI suggestions respect your budget context so proposals stay realistic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my wedding data private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your data is stored securely on Google Cloud and Firebase infrastructure. We do not sell personal information. Read the full privacy policy for details on data handling and your rights."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics 4: replace G-XXXXXXXXXX with your GA4 measurement ID, then uncomment -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
@@ -432,6 +499,7 @@
                     class="device-shell__screen"
                     src="assets/images/wedcheese-home-screen.png"
                     alt="Wedcheese home dashboard"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Home dashboard</h3>
@@ -444,6 +512,7 @@
                     class="device-shell__screen"
                     src="assets/images/wedcheese-ai-chat.png"
                     alt="Wedcheese AI chat with a vendor search proposal"
+                    loading="lazy"
                   />
                 </div>
                 <h3>AI agent in action</h3>
@@ -456,6 +525,7 @@
                     class="device-shell__screen"
                     src="assets/images/wedcheese-todo-screen-v2.png"
                     alt="Wedcheese to-do screen with milestone-based tasks"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Task planning</h3>
@@ -468,6 +538,7 @@
                     class="device-shell__screen"
                     src="assets/images/wedcheese-guest-list.png"
                     alt="Wedcheese guest list with RSVP tracking"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Guest list &amp; RSVPs</h3>
@@ -480,6 +551,7 @@
                     class="device-shell__screen"
                     src="assets/images/wedcheese-saved-screen.png"
                     alt="Wedcheese saved vendors, schedule, and notebook"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Saved vendors &amp; notes</h3>
@@ -492,6 +564,7 @@
                     class="device-shell__screen"
                     src="assets/images/wedcheese-premium-screen-sim.png"
                     alt="Wedcheese subscription screen"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Premium support</h3>
@@ -499,6 +572,44 @@
               </article>
             </div>
             <div class="carousel-dots" aria-label="Screenshot carousel navigation"></div>
+          </div>
+        </section>
+
+        <section class="section" id="faq">
+          <div class="container">
+            <h2 class="section-heading">Frequently asked questions</h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary class="faq-question">Is Wedcheese free to use?</summary>
+                <div class="faq-answer">
+                  <p>Yes. Wedcheese is free to download and use. You get access to budgets, guest lists, vendors, checklists, decor planning, timelines, and a limited number of daily AI questions at no cost. Premium unlocks more AI capacity for active planning weeks.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">What does the AI wedding planner actually do?</summary>
+                <div class="faq-answer">
+                  <p>The AI reads your wedding profile, budget, guest list, and vendor team, then proposes structured changes you review and approve. It can build checklists, adjust budgets, search vendors, draft emails, create day-of timelines, and suggest decor ideas — all from one conversation.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">How does the digital guest list manager work?</summary>
+                <div class="faq-answer">
+                  <p>Add guests with RSVP status, plus-ones, children, dietary notes, categories, and contact details. Wedcheese generates guest-specific RSVP links and connects headcount changes to your budget automatically.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Can I track my wedding budget inside Wedcheese?</summary>
+                <div class="faq-answer">
+                  <p>Yes. The smart wedding budget tracker lets you create custom categories, log deposits and balances, and see how guest-count changes affect spending. AI suggestions respect your budget context so proposals stay realistic.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Is my wedding data private?</summary>
+                <div class="faq-answer">
+                  <p>Your data is stored securely on Google Cloud and Firebase infrastructure. We do not sell personal information. Read the full <a href="/privacy-policy.html">privacy policy</a> for details on data handling and your rights.</p>
+                </div>
+              </details>
+            </div>
           </div>
         </section>
       </main>
