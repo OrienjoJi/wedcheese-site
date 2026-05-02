@@ -6,6 +6,62 @@ document.addEventListener("DOMContentLoaded", () => {
     node.textContent = currentYear;
   });
 
+  const header = document.querySelector(".site-header");
+  const navToggle = document.querySelector(".site-nav__toggle");
+  const primaryNav = document.querySelector("#primary-nav");
+
+  function closeMobileNav() {
+    if (!header || !navToggle) return;
+    header.classList.remove("is-nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open menu");
+    document.body.classList.remove("is-mobile-nav-open");
+  }
+
+  function closeAllDropdowns() {
+    document.querySelectorAll(".nav-dropdown.is-open").forEach((dd) => {
+      dd.classList.remove("is-open");
+      dd.querySelector(".nav-dropdown__trigger")?.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  if (header && navToggle && primaryNav) {
+    navToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const opening = !header.classList.contains("is-nav-open");
+      if (opening) {
+        closeAllDropdowns();
+        header.classList.add("is-nav-open");
+        navToggle.setAttribute("aria-expanded", "true");
+        navToggle.setAttribute("aria-label", "Close menu");
+        document.body.classList.add("is-mobile-nav-open");
+      } else {
+        closeMobileNav();
+      }
+    });
+
+    primaryNav.querySelectorAll("a[data-nav-link]").forEach((link) => {
+      link.addEventListener("click", () => closeMobileNav());
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobileNav();
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!header.classList.contains("is-nav-open")) return;
+      if (!header.contains(e.target)) closeMobileNav();
+    });
+
+    window.addEventListener(
+      "resize",
+      () => {
+        if (window.matchMedia("(min-width: 768px)").matches) closeMobileNav();
+      },
+      { passive: true }
+    );
+  }
+
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
   const navLinks = document.querySelectorAll("[data-nav-link]");
 
@@ -39,10 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("click", () => {
-    document.querySelectorAll(".nav-dropdown.is-open").forEach((dd) => {
-      dd.classList.remove("is-open");
-      dd.querySelector(".nav-dropdown__trigger")?.setAttribute("aria-expanded", "false");
-    });
+    closeAllDropdowns();
   });
 
   /* ── Screenshot carousel dots ────────────────────── */
