@@ -26,6 +26,31 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.wedcheese.com/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/ai-wedding-planner-budget-and-guests/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/premium-ai-wedding-planner-worth-it/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/digital-guest-list-manager-rsvp-links/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/ai-vendor-search-wedding-budget/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.wedcheese.com/app-disclaimer.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navLinks.forEach((link) => {
     const target = link.getAttribute("data-nav-link");
-    if (target && path === target) {
+    if (!target) return;
+    let isCurrent = path === target;
+    if (target === "/blog") {
+      isCurrent = path === "/blog" || path.startsWith("/blog/");
+    }
+    if (isCurrent) {
       link.setAttribute("aria-current", "page");
     }
   });

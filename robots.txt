@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Disallow: /blog/post-template.html
+
 Sitemap: https://www.wedcheese.com/sitemap.xml
