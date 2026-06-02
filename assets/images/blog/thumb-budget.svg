@@ -1,4 +1,4 @@
-<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="640" height="360" rx="20" fill="#FFF8EB"/>
   <rect x="48" y="48" width="200" height="264" rx="20" fill="#FFFFFF" stroke="#E8DDD6" stroke-width="2"/>
   <rect x="72" y="72" width="152" height="16" rx="8" fill="#573A45" fill-opacity="0.75"/>
@@ -8,8 +8,9 @@
   <rect x="72" y="212" width="152" height="24" rx="12" fill="#7CA982" fill-opacity="0.45"/>
   <rect x="72" y="248" width="152" height="24" rx="12" fill="#E4D7DB"/>
   <rect x="280" y="48" width="312" height="120" rx="20" fill="#573A45"/>
-  <text x="304" y="100" fill="#FFFBF3" font-family="Roboto Serif, Georgia, serif" font-size="28" font-weight="600">£15,000</text>
-  <text x="304" y="132" fill="#FFFBF3" fill-opacity="0.72" font-family="Poppins, sans-serif" font-size="14">Sample UK wedding budget</text>
+  <rect x="304" y="72" width="120" height="14" rx="7" fill="#FFFBF3" fill-opacity="0.35"/>
+  <rect x="304" y="96" width="180" height="28" rx="8" fill="#FFFBF3"/>
+  <rect x="304" y="136" width="140" height="12" rx="6" fill="#FFFBF3" fill-opacity="0.55"/>
   <rect x="280" y="192" width="148" height="120" rx="20" fill="#FFFFFF" stroke="#E8DDD6" stroke-width="2"/>
   <rect x="304" y="216" width="100" height="12" rx="6" fill="#D6C5CB"/>
   <rect x="304" y="240" width="80" height="24" rx="12" fill="#F9B527"/>
