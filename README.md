@@ -5,6 +5,7 @@ This folder contains a lightweight static website for `www.wedcheese.com`.
 ## Files
 
 - `index.html`: landing page
+- `blog/`: SEO blog index and articles (see `blog/post-template.html` and `assets/partials/blog-post-cta.html`)
 - `privacy-policy.html`: privacy policy
 - `terms-of-service.html`: terms of service
 - `support.html`: public support contact page

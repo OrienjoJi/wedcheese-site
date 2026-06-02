@@ -32,15 +32,27 @@
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/12-month-wedding-checklist/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-budget-breakdown/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/adults-only-wedding-guests/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/awkward-wedding-emails/</loc>
@@ -62,7 +74,7 @@
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/wedding-budget-breakdown/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
