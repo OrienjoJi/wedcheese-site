@@ -1,0 +1,279 @@
+#!/usr/bin/env node
+/**
+ * Renders static blog post HTML from JSON content files.
+ * Usage: node marketing/scripts/render-blog-post.mjs [--all | slug]
+ */
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const MARKETING = path.resolve(__dirname, '..');
+const CONTENT_DIR = path.join(MARKETING, 'blog', '_content');
+const BLOG_DIR = path.join(MARKETING, 'blog');
+
+const APP_STORE =
+  'https://apps.apple.com/us/app/wedcheese-ai-wedding-planner/id6760207985';
+const PLAY_STORE =
+  'https://play.google.com/store/apps/details?id=com.orienjo.wedcheese';
+
+const STORE_BUTTONS = `
+<div class="store-badges" aria-label="App download options">
+  <a class="store-button store-button--apple" href="${APP_STORE}" target="_blank" rel="noopener noreferrer" aria-label="Download WedCheese on the Apple App Store">
+    <span class="store-button__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.17 12.5c.03 2.61 2.29 3.48 2.31 3.49-.02.06-.36 1.23-1.18 2.43-.71 1.03-1.45 2.06-2.61 2.08-1.14.02-1.51-.68-2.82-.68-1.31 0-1.72.66-2.8.7-1.12.04-1.98-1.12-2.69-2.14-1.46-2.11-2.58-5.97-1.08-8.58.74-1.3 2.06-2.13 3.49-2.15 1.09-.02 2.11.73 2.82.73.7 0 2.02-.9 3.4-.77.58.02 2.23.23 3.29 1.78-.09.06-1.96 1.14-1.93 3.11Z" fill="currentColor"/><path d="M14.44 4.73c.59-.71 1-1.7.89-2.68-.85.03-1.87.57-2.48 1.28-.55.64-1.03 1.66-.9 2.64.95.07 1.9-.48 2.49-1.24Z" fill="currentColor"/></svg></span>
+    <span class="store-button__text"><span class="store-button__eyebrow">Download on the</span><span class="store-button__label">App Store</span></span>
+  </a>
+  <a class="store-button store-button--google" href="${PLAY_STORE}" target="_blank" rel="noopener noreferrer" aria-label="Download WedCheese on Google Play">
+    <span class="store-button__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3.75 13.57 12 3 20.25V3.75Z" fill="#00C2FF"/><path d="M13.57 12 17.26 8.93 21 11.08c1 .56 1 1.28 0 1.84l-3.74 2.15L13.57 12Z" fill="#FFD54F"/><path d="M3 3.75 17.26 8.93 13.57 12 3 3.75Z" fill="#34A853"/><path d="M3 20.25 13.57 12 17.26 15.07 3 20.25Z" fill="#EA4335"/></svg></span>
+    <span class="store-button__text"><span class="store-button__eyebrow">Get it on</span><span class="store-button__label">Google Play</span></span>
+  </a>
+</div>`;
+
+const CTA_COPY = {
+  general:
+    'Plan your wedding with less chaos. Download WedCheese to manage your checklist, budget, guests, RSVPs, vendors, decor, and AI planner in one app.',
+  ai: 'Ask WedCheese what to do next. The AI planner uses your wedding details to suggest tasks, budget updates, vendor messages, and timeline ideas.',
+  budget:
+    'Track your wedding budget in WedCheese and ask the AI planner how guest count, vendors, and decor choices affect your spending.',
+  rsvp: 'Create your guest list and digital RSVP links in WedCheese so guests can reply without downloading another app.',
+  checklist:
+    'Build a wedding checklist around your actual date, not a random spreadsheet from the internet.',
+  decor:
+    'Plan your wedding colour palette and decor checklist in WedCheese—then ask the AI for ideas that match your budget.',
+  vendor:
+    'Save vendors, compare quotes, and draft emails in WedCheese so every supplier decision stays linked to your budget.',
+};
+
+function ctaBlock(variant = 'general', extraClass = '') {
+  const text = CTA_COPY[variant] || CTA_COPY.general;
+  const cls = extraClass ? `blog-post-cta ${extraClass}` : 'blog-post-cta';
+  return `
+<aside class="${cls}" aria-label="Download WedCheese app">
+  <div class="blog-post-cta__inner">
+    <img class="blog-post-cta__logo" src="/assets/images/apple-touch-icon.png" alt="WedCheese app icon" width="56" height="56" />
+    <div class="blog-post-cta__content">
+      <p class="blog-post-cta__text">${text}</p>
+      ${STORE_BUTTONS}
+      <p class="blog-post-cta__secondary">Start free. Upgrade when you need more AI planning help.</p>
+    </div>
+  </div>
+</aside>`;
+}
+
+function faqSchema(faqs) {
+  if (!faqs?.length) return '';
+  return `
+<script type="application/ld+json">
+${JSON.stringify(
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+    null,
+    2
+  )}
+</script>`;
+}
+
+function renderRedirect(target) {
+  const url = target.startsWith('http') ? target : `https://www.wedcheese.com/blog/${target.replace(/\/$/, '')}/`;
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=${url}" />
+  <link rel="canonical" href="${url}" />
+  <title>Redirecting…</title>
+</head>
+<body><p><a href="${url}">Continue to article</a></p></body>
+</html>`;
+}
+
+function renderArticle(article, bodyHtml) {
+  const canonical = `https://www.wedcheese.com/blog/${article.slug}/`;
+  const faqHtml =
+    article.faqs?.length ?
+      `<h2>Frequently asked questions</h2>${article.faqs.map((f) => `<h3>${f.q}</h3><p>${f.a}</p>`).join('')}`
+    : '';
+
+  const ctas = article.ctaVariants || ['general', 'general'];
+  const midCta = ctaBlock(ctas[0] || 'general');
+  const endCta = ctaBlock(ctas[1] || ctas[0] || 'general', 'blog-post-cta--end');
+
+  const bodyWithCta = bodyHtml.replace('<!-- MID_CTA -->', midCta);
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${article.seoTitle} | WedCheese</title>
+  <meta name="description" content="${article.metaDescription}" />
+  <link rel="canonical" href="${canonical}" />
+  <link rel="alternate" hreflang="en-gb" href="${canonical}" />
+  <link rel="alternate" hreflang="x-default" href="${canonical}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="${canonical}" />
+  <meta property="og:title" content="${article.seoTitle}" />
+  <meta property="og:description" content="${article.metaDescription}" />
+  <meta property="og:image" content="https://www.wedcheese.com/assets/images/og-cover.png" />
+  <meta property="og:site_name" content="WedCheese" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="article:published_time" content="${article.datePublished}" />
+  <meta property="article:modified_time" content="${article.dateModified || article.datePublished}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${article.seoTitle}" />
+  <meta name="twitter:description" content="${article.metaDescription}" />
+  <meta name="twitter:image" content="https://www.wedcheese.com/assets/images/og-cover.png" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/assets/images/wedcheese-logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=12" />
+  <script src="../../assets/js/site.js?v=9" defer></script>
+  <script type="application/ld+json">
+${JSON.stringify(
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: article.h1,
+      description: article.metaDescription,
+      datePublished: article.datePublished,
+      dateModified: article.dateModified || article.datePublished,
+      author: { '@type': 'Organization', name: 'WedCheese' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Orienjo Ltd.',
+        url: 'https://www.wedcheese.com/',
+      },
+      image: 'https://www.wedcheese.com/assets/images/og-cover.png',
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    },
+    null,
+    2
+  )}
+  </script>
+  <script type="application/ld+json">
+${JSON.stringify(
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Blog', item: 'https://www.wedcheese.com/blog/' },
+        { '@type': 'ListItem', position: 2, name: article.breadcrumb || article.h1 },
+      ],
+    },
+    null,
+    2
+  )}
+  </script>
+  ${faqSchema(article.faqs)}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ETTR3L6HK"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0ETTR3L6HK');</script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/" aria-label="WedCheese home">
+          <img class="brand-logo" src="../../assets/images/wedcheese-logo.svg" alt="" aria-hidden="true" />
+          <span class="brand__name">WedCheese</span>
+        </a>
+        <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Primary">
+          <a href="/" data-nav-link="/">Home</a>
+          <a href="/blog" data-nav-link="/blog">Blog</a>
+          <a href="/support.html" data-nav-link="/support.html">Support</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__trigger" aria-expanded="false" aria-haspopup="true">Legal<svg class="nav-dropdown__caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="nav-dropdown__menu">
+              <a href="/privacy-policy.html" data-nav-link="/privacy-policy.html">Privacy Policy</a>
+              <a href="/terms-of-service.html" data-nav-link="/terms-of-service.html">Terms of Service</a>
+              <a href="/data-deletion.html" data-nav-link="/data-deletion.html">Data Deletion</a>
+              <a href="/app-disclaimer.html" data-nav-link="/app-disclaimer.html">App Disclaimer</a>
+              <a href="/third-party-disclosure.html" data-nav-link="/third-party-disclosure.html">Third-Party Disclosure</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="blog-main">
+      <div class="container">
+        <div class="blog-back"><a href="/blog/">← Back to blog</a></div>
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+          <header class="blog-article-header">
+            <span class="eyebrow">${article.category}</span>
+            <h1 itemprop="headline">${article.h1}</h1>
+            <div class="policy-meta"><span>${article.dateLabel || 'Updated June 2026'}</span><span>${article.readTime || '~8 min read'}</span></div>
+          </header>
+          <div class="blog-prose" itemprop="articleBody">
+            ${bodyWithCta}
+            ${faqHtml}
+            <h2>Plan with less chaos</h2>
+            <p>${article.summary || 'WedCheese is the AI wedding planner that turns your real wedding details into an organised plan: checklist, budget, guests, RSVP, decor, vendors, and notes in one calm app.'}</p>
+          </div>
+          ${endCta}
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__note">&copy; <span data-current-year>2026</span> Orienjo Ltd. WedCheese.</div>
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <a href="/blog/">Blog</a><a href="/support.html">Support</a><a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-service.html">Terms of Service</a><a href="/data-deletion.html">Data Deletion</a>
+          <a href="/app-disclaimer.html">App Disclaimer</a><a href="/third-party-disclosure.html">Third-Party Disclosure</a>
+        </nav>
+      </div>
+      <div class="container"><p class="site-footer__boilerplate">WedCheese is a free AI-powered wedding planning app available on iOS and Android. It features an intelligent AI assistant, an automated budget tracker, a digital guest list and RSVP manager, and a dynamic day-of timeline builder.</p></div>
+    </footer>
+  </div>
+</body>
+</html>`;
+}
+
+function loadManifest() {
+  const manifestPath = path.join(CONTENT_DIR, 'manifest.json');
+  return JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+}
+
+function renderOne(entry) {
+  if (entry.redirectTo) {
+    const outDir = path.join(BLOG_DIR, entry.slug);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), renderRedirect(entry.redirectTo));
+    console.log(`redirect: ${entry.slug} → ${entry.redirectTo}`);
+    return;
+  }
+  const bodyPath = path.join(CONTENT_DIR, `${entry.slug}.html`);
+  if (!fs.existsSync(bodyPath)) {
+    console.warn(`skip (no body): ${entry.slug}`);
+    return;
+  }
+  const body = fs.readFileSync(bodyPath, 'utf8');
+  const html = renderArticle(entry, body);
+  const outDir = path.join(BLOG_DIR, entry.slug);
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'index.html'), html);
+  console.log(`rendered: ${entry.slug}`);
+}
+
+const arg = process.argv[2];
+const manifest = loadManifest();
+const entries = arg && arg !== '--all' ? manifest.filter((e) => e.slug === arg) : manifest;
+if (!entries.length) {
+  console.error('No matching articles');
+  process.exit(1);
+}
+entries.forEach(renderOne);

@@ -16,6 +16,26 @@ This folder contains a lightweight static website for `www.wedcheese.com`.
 - `CNAME`: GitHub Pages custom domain
 - `.nojekyll`: disables Jekyll processing on GitHub Pages
 
+## Blog authoring
+
+SEO blog content is managed as:
+
+- `blog/_content/manifest.json` — metadata, FAQs, categories, redirects
+- `blog/_content/{slug}.html` — article body HTML (British English)
+- `scripts/render-blog-post.mjs` — renders full pages to `blog/{slug}/index.html`
+- `scripts/generate-blog-index.mjs` — regenerates `blog/index.html` and `sitemap.xml`
+- `content-plan-wedcheese-blog.md` — SEO clusters, priorities, internal linking
+
+Rebuild after editing content:
+
+```bash
+cd marketing
+node scripts/render-blog-post.mjs --all
+node scripts/generate-blog-index.mjs
+```
+
+Deploy: sync this folder to the `wedcheese-site` GitHub Pages repository.
+
 ## Local preview
 
 Because this site uses root-relative links, preview it from the `marketing/` folder with a static server:

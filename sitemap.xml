@@ -2,146 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.wedcheese.com/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.wedcheese.com/blog/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/support.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.wedcheese.com/privacy-policy.html</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/terms-of-service.html</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.wedcheese.com/data-deletion.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/support.html</loc>
-    <lastmod>2026-05-02</lastmod>
+    <loc>https://www.wedcheese.com/blog/best-ai-wedding-planner-apps-2026/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/blog/</loc>
-    <lastmod>2026-06-12</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wedcheese.com/blog/traditional-paper-rsvps-dead/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <loc>https://www.wedcheese.com/blog/ai-wedding-planner-vs-chatgpt/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/12-month-wedding-planning-checklist/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/6-month-wedding-planning-checklist/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/average-uk-wedding-cost-2026/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.wedcheese.com/blog/hidden-wedding-costs-tracker/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <loc>https://www.wedcheese.com/blog/wedding-budget-calculator/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.wedcheese.com/blog/6-month-wedding-checklist/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <loc>https://www.wedcheese.com/blog/15000-wedding-budget-uk/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/online-wedding-rsvp-guide/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-guest-list-template/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-decor-checklist/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-colour-palette-guide/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-vendor-checklist/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/questions-to-ask-wedding-venue/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-day-timeline-template/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/hidden-wedding-costs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-guest-count-budget/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-rsvp-reminder-wording/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/adults-only-wedding-wording/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/no-plus-one-wedding-wording/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/diy-wedding-decor-worth-it/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/compare-wedding-vendor-quotes/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-deposit-tracker/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/what-to-do-after-getting-engaged/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-week-checklist/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-vendor-shortlist/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-dietary-requirements/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-table-decor-ideas-budget/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/ai-wedding-admin/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-budget-spreadsheet-vs-app/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/plan-wedding-without-a-planner/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/chatgpt-vs-ai-wedding-planner/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/blog/wedding-day-timeline-schedule/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/12-month-wedding-checklist/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/6-month-wedding-checklist/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/wedding-budget-breakdown/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/hidden-wedding-costs-tracker/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/wedding-day-timeline-schedule/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/adults-only-wedding-guests/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/traditional-paper-rsvps-dead/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/digital-guest-list-manager-rsvp-links/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.wedcheese.com/blog/premium-ai-wedding-planner-worth-it/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/awkward-wedding-emails/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/cut-wedding-guest-list/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/negotiate-wedding-vendors/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/ai-wedding-planner-budget-and-guests/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/blog/premium-ai-wedding-planner-worth-it/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/blog/digital-guest-list-manager-rsvp-links/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.wedcheese.com/blog/ai-vendor-search-wedding-budget/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/app-disclaimer.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/third-party-disclosure.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.wedcheese.com/cancellation.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>
