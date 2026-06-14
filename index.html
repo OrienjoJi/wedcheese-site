@@ -33,8 +33,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="assets/css/styles.css?v=13" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=14" />
     <script src="assets/js/site.js?v=9" defer></script>
+    <script src="assets/js/home.js?v=1" defer></script>
 
     <script type="application/ld+json">
     {
@@ -124,7 +125,7 @@
       gtag('config', 'G-0ETTR3L6HK');
     </script>
   </head>
-  <body>
+  <body class="page-home">
     <div class="page-shell">
       <header class="site-header">
         <div class="container site-header__inner">
@@ -132,11 +133,14 @@
             <img class="brand-logo" src="assets/images/wedcheese-logo.svg" alt="" aria-hidden="true" />
             <span class="brand__name">WedCheese</span>
           </a>
-          <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
-            <span class="site-nav__toggle-bar" aria-hidden="true"></span>
-            <span class="site-nav__toggle-bar" aria-hidden="true"></span>
-            <span class="site-nav__toggle-bar" aria-hidden="true"></span>
-          </button>
+          <div class="site-header__tools">
+            <a class="button button--accent site-header__cta" href="#download">Download free</a>
+            <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+              <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+              <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+              <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+            </button>
+          </div>
           <nav id="primary-nav" class="site-nav" aria-label="Primary">
             <a href="/" data-nav-link="/">Home</a>
             <a href="/blog" data-nav-link="/blog">Blog</a>
@@ -155,7 +159,6 @@
               </div>
             </div>
           </nav>
-          <a class="button button--accent site-header__cta" href="#download">Download free</a>
         </div>
       </header>
 
@@ -163,45 +166,49 @@
         <!-- Hero -->
         <section class="hero">
           <div class="container hero__grid">
-            <div>
-              <span class="eyebrow">Ditch the wedding planning chaos.</span>
+            <div class="hero__copy">
+              <span class="eyebrow">Ditch the wedding planning overwhelm.</span>
               <h1>Your wedding plan finally has a brain.</h1>
-              <p>
-                WedCheese is an <strong>AI wedding planner</strong> that turns your wedding date, budget, guest list, and style into a clear plan, covering your checklist, budget, RSVPs, decor, vendors, notes, and timeline in one calm <strong>wedding planning app</strong>.
+              <p class="hero__lead">
+                WedCheese is an AI wedding planner app for your checklist, budget, guest list, RSVPs, decor, vendors, notes, and timeline.
               </p>
 
               <div class="hero__actions">
-                <a class="button button--accent" href="#download">Try the AI planner free</a>
+                <a class="button button--accent" href="#download">Download free</a>
                 <a class="button button--ghost" href="#ai-planner">See how it works</a>
               </div>
+
+              <div class="download-block" id="download">
+                <p class="download-block__label">Start your wedding plan free.</p>
+                <div class="store-badges" aria-label="App download options">
+                  <a class="store-button store-button--apple" href="https://apps.apple.com/us/app/wedcheese-ai-wedding-planner/id6760207985" target="_blank" rel="noopener noreferrer" aria-label="Download WedCheese on the Apple App Store">
+                    <span class="store-button__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.17 12.5c.03 2.61 2.29 3.48 2.31 3.49-.02.06-.36 1.23-1.18 2.43-.71 1.03-1.45 2.06-2.61 2.08-1.14.02-1.51-.68-2.82-.68-1.31 0-1.72.66-2.8.7-1.12.04-1.98-1.12-2.69-2.14-1.46-2.11-2.58-5.97-1.08-8.58.74-1.3 2.06-2.13 3.49-2.15 1.09-.02 2.11.73 2.82.73.7 0 2.02-.9 3.4-.77.58.02 2.23.23 3.29 1.78-.09.06-1.96 1.14-1.93 3.11Z" fill="currentColor"/><path d="M14.44 4.73c.59-.71 1-1.7.89-2.68-.85.03-1.87.57-2.48 1.28-.55.64-1.03 1.66-.9 2.64.95.07 1.9-.48 2.49-1.24Z" fill="currentColor"/></svg>
+                    </span>
+                    <span class="store-button__text"><span class="store-button__eyebrow">Download on the</span><span class="store-button__label">App Store</span></span>
+                  </a>
+                  <a class="store-button store-button--google" href="https://play.google.com/store/apps/details?id=com.orienjo.wedcheese" target="_blank" rel="noopener noreferrer" aria-label="Download WedCheese on Google Play">
+                    <span class="store-button__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3.75 13.57 12 3 20.25V3.75Z" fill="#00C2FF"/><path d="M13.57 12 17.26 8.93 21 11.08c1 .56 1 1.28 0 1.84l-3.74 2.15L13.57 12Z" fill="#FFD54F"/><path d="M3 3.75 17.26 8.93 13.57 12 3 3.75Z" fill="#34A853"/><path d="M3 20.25 13.57 12 17.26 15.07 3 20.25Z" fill="#EA4335"/></svg>
+                    </span>
+                    <span class="store-button__text"><span class="store-button__eyebrow">Get it on</span><span class="store-button__label">Google Play</span></span>
+                  </a>
+                </div>
+              </div>
+
               <p class="hero__trust">Free to start. 5 daily AI credits included. Available on iOS and Android.</p>
 
-              <ul class="hero__bullets">
+              <ul class="hero__bullets hero__bullets--desktop">
                 <li>Build your first checklist from your wedding date</li>
                 <li>Track budget, guests, RSVPs, vendors, and decor</li>
                 <li>Ask AI what to do next when planning gets messy</li>
               </ul>
-
-              <div class="store-badges" id="download" aria-label="App download options">
-                <a class="store-button store-button--apple" href="https://apps.apple.com/us/app/wedcheese-ai-wedding-planner/id6760207985" target="_blank" rel="noopener noreferrer" aria-label="Download WedCheese on the Apple App Store">
-                  <span class="store-button__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.17 12.5c.03 2.61 2.29 3.48 2.31 3.49-.02.06-.36 1.23-1.18 2.43-.71 1.03-1.45 2.06-2.61 2.08-1.14.02-1.51-.68-2.82-.68-1.31 0-1.72.66-2.8.7-1.12.04-1.98-1.12-2.69-2.14-1.46-2.11-2.58-5.97-1.08-8.58.74-1.3 2.06-2.13 3.49-2.15 1.09-.02 2.11.73 2.82.73.7 0 2.02-.9 3.4-.77.58.02 2.23.23 3.29 1.78-.09.06-1.96 1.14-1.93 3.11Z" fill="currentColor"/><path d="M14.44 4.73c.59-.71 1-1.7.89-2.68-.85.03-1.87.57-2.48 1.28-.55.64-1.03 1.66-.9 2.64.95.07 1.9-.48 2.49-1.24Z" fill="currentColor"/></svg>
-                  </span>
-                  <span class="store-button__text"><span class="store-button__eyebrow">Download on the</span><span class="store-button__label">App Store</span></span>
-                </a>
-                <a class="store-button store-button--google" href="https://play.google.com/store/apps/details?id=com.orienjo.wedcheese" target="_blank" rel="noopener noreferrer" aria-label="Download WedCheese on Google Play">
-                  <span class="store-button__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3.75 13.57 12 3 20.25V3.75Z" fill="#00C2FF"/><path d="M13.57 12 17.26 8.93 21 11.08c1 .56 1 1.28 0 1.84l-3.74 2.15L13.57 12Z" fill="#FFD54F"/><path d="M3 3.75 17.26 8.93 13.57 12 3 3.75Z" fill="#34A853"/><path d="M3 20.25 13.57 12 17.26 15.07 3 20.25Z" fill="#EA4335"/></svg>
-                  </span>
-                  <span class="store-button__text"><span class="store-button__eyebrow">Get it on</span><span class="store-button__label">Google Play</span></span>
-                </a>
-              </div>
             </div>
 
-            <aside class="hero-card">
+            <aside class="hero-card hero-phone">
               <div class="hero-card__frame">
                 <div class="device-shell device-shell--hero">
-                  <img class="device-shell__screen" src="assets/images/wedcheese-home-screen.png" alt="WedCheese AI wedding planner app showing wedding checklist, budget, guests, and planning dashboard" width="390" height="844" />
+                  <img class="device-shell__screen" src="assets/images/wedcheese-home-screen.png" alt="WedCheese AI wedding planner app showing checklist, budget, guests, and wedding dashboard" width="390" height="844" />
                 </div>
               </div>
               <div class="hero-prompt-card" aria-label="Example AI planner conversation">
@@ -218,25 +225,25 @@
           <div class="container">
             <span class="eyebrow">Why wedding planning feels so messy</span>
             <h2 class="section-heading">One wedding. Too many places to manage it.</h2>
-            <p class="section-intro">
-              Wedding planning starts exciting, then somehow turns into spreadsheets, Pinterest boards, vendor tabs, guest messages, budget panic, and family opinions arriving from every direction. WedCheese brings the moving parts into one organised AI-powered workspace, so you can see what matters, what is next, and what needs a decision.
+            <p class="section-intro section-intro--compact-mobile">
+              Wedding planning starts exciting, then turns into spreadsheets, guest messages, budget panic, and family opinions from every direction. WedCheese brings the moving parts into one organised workspace.
             </p>
             <div class="pain-grid">
               <article class="pain-card">
                 <h3>Spreadsheets everywhere</h3>
-                <p>Budget in one file, guest list in another, vendor notes somewhere nobody can find.</p>
+                <p>Budget in one file, guest list in another, vendor notes nowhere to be found.</p>
               </article>
               <article class="pain-card">
                 <h3>No clear next step</h3>
-                <p>You know there is a lot to do, but not what actually matters this week.</p>
+                <p>Lots to do, but not what actually matters this week.</p>
               </article>
               <article class="pain-card">
                 <h3>Guest list chaos</h3>
-                <p>Plus-ones, children, RSVPs, dietary notes, and family politics all need tracking.</p>
+                <p>Plus-ones, children, RSVPs, and dietary notes all need tracking.</p>
               </article>
               <article class="pain-card">
                 <h3>Budget keeps moving</h3>
-                <p>Every guest, vendor, decor item, and deposit changes the real cost.</p>
+                <p>Every guest, vendor, and deposit changes the real cost.</p>
               </article>
               <article class="pain-card">
                 <h3>Too many ideas</h3>
@@ -383,7 +390,7 @@
             <p class="section-intro">
               Spreadsheets are useful until planning becomes emotional, visual, collaborative, and constantly changing. Generic AI can help with ideas, but it does not naturally manage your real wedding workspace.
             </p>
-            <div class="comparison-wrap">
+            <div class="comparison-wrap comparison-wrap--desktop">
               <table class="comparison-table">
                 <thead>
                   <tr>
@@ -433,6 +440,56 @@
                 </tbody>
               </table>
             </div>
+            <div class="comparison-cards" aria-label="WedCheese compared to spreadsheets and generic AI">
+              <article class="comparison-card">
+                <h3 class="comparison-card__title">Knows your wedding date, budget, and guest list</h3>
+                <dl class="comparison-card__list">
+                  <div class="comparison-card__row"><dt>Spreadsheet</dt><dd>Manual</dd></div>
+                  <div class="comparison-card__row"><dt>Generic AI chat</dt><dd>Only if you keep pasting context</dd></div>
+                  <div class="comparison-card__row comparison-card__row--winner"><dt>WedCheese</dt><dd>Built around your wedding profile</dd></div>
+                </dl>
+              </article>
+              <article class="comparison-card">
+                <h3 class="comparison-card__title">Creates checklist and timeline</h3>
+                <dl class="comparison-card__list">
+                  <div class="comparison-card__row"><dt>Spreadsheet</dt><dd>Manual template</dd></div>
+                  <div class="comparison-card__row"><dt>Generic AI chat</dt><dd>Advice only</dd></div>
+                  <div class="comparison-card__row comparison-card__row--winner"><dt>WedCheese</dt><dd>Personalised planning flow</dd></div>
+                </dl>
+              </article>
+              <article class="comparison-card">
+                <h3 class="comparison-card__title">Tracks budget and deposits</h3>
+                <dl class="comparison-card__list">
+                  <div class="comparison-card__row"><dt>Spreadsheet</dt><dd>Manual</dd></div>
+                  <div class="comparison-card__row"><dt>Generic AI chat</dt><dd>No live tracker</dd></div>
+                  <div class="comparison-card__row comparison-card__row--winner"><dt>WedCheese</dt><dd>Budget workspace</dd></div>
+                </dl>
+              </article>
+              <article class="comparison-card">
+                <h3 class="comparison-card__title">Manages guests and RSVPs</h3>
+                <dl class="comparison-card__list">
+                  <div class="comparison-card__row"><dt>Spreadsheet</dt><dd>Manual</dd></div>
+                  <div class="comparison-card__row"><dt>Generic AI chat</dt><dd>No RSVP system</dd></div>
+                  <div class="comparison-card__row comparison-card__row--winner"><dt>WedCheese</dt><dd>Guest list and RSVP links</dd></div>
+                </dl>
+              </article>
+              <article class="comparison-card">
+                <h3 class="comparison-card__title">Saves vendors and notes</h3>
+                <dl class="comparison-card__list">
+                  <div class="comparison-card__row"><dt>Spreadsheet</dt><dd>Messy</dd></div>
+                  <div class="comparison-card__row"><dt>Generic AI chat</dt><dd>Not connected</dd></div>
+                  <div class="comparison-card__row comparison-card__row--winner"><dt>WedCheese</dt><dd>Saved wedding binder</dd></div>
+                </dl>
+              </article>
+              <article class="comparison-card">
+                <h3 class="comparison-card__title">Suggests useful next steps</h3>
+                <dl class="comparison-card__list">
+                  <div class="comparison-card__row"><dt>Spreadsheet</dt><dd>No</dd></div>
+                  <div class="comparison-card__row"><dt>Generic AI chat</dt><dd>Generic advice</dd></div>
+                  <div class="comparison-card__row comparison-card__row--winner"><dt>WedCheese</dt><dd>Based on your wedding context</dd></div>
+                </dl>
+              </article>
+            </div>
             <div class="section-cta">
               <a class="button button--accent" href="#download">Download WedCheese free</a>
             </div>
@@ -446,42 +503,42 @@
             <div class="screen-grid">
               <article class="screen-card">
                 <div class="device-shell device-shell--gallery">
-                  <img class="device-shell__screen" src="assets/images/wedcheese-home-screen.png" alt="WedCheese home dashboard with countdown, budget, guests, and RSVP progress" loading="lazy" />
+                  <img class="device-shell__screen" src="assets/images/wedcheese-home-screen.png" alt="WedCheese home dashboard showing wedding countdown, budget, guests, and planning shortcuts" loading="lazy" />
                 </div>
                 <h3>Home dashboard</h3>
                 <p>See countdown, budget, guests, RSVP progress, and planning shortcuts from one calm starting point.</p>
               </article>
               <article class="screen-card">
                 <div class="device-shell device-shell--gallery">
-                  <img class="device-shell__screen" src="assets/images/wedcheese-ai-chat.png" alt="WedCheese AI wedding planner chat with vendor and budget suggestions" loading="lazy" />
+                  <img class="device-shell__screen" src="assets/images/wedcheese-ai-chat.png" alt="WedCheese AI planner chat showing a structured wedding planning proposal" loading="lazy" />
                 </div>
                 <h3>AI planner</h3>
                 <p>Ask for next steps, vendor help, budget suggestions, guest wording, decor ideas, and timeline support.</p>
               </article>
               <article class="screen-card">
                 <div class="device-shell device-shell--gallery">
-                  <img class="device-shell__screen" src="assets/images/wedcheese-todo-screen-v2.png" alt="WedCheese wedding checklist app with milestone-based tasks" loading="lazy" />
+                  <img class="device-shell__screen" src="assets/images/wedcheese-todo-screen-v2.png" alt="WedCheese checklist screen showing milestone-based wedding tasks" loading="lazy" />
                 </div>
                 <h3>Checklist</h3>
                 <p>Follow tasks by milestone so you know what to do now, not just eventually.</p>
               </article>
               <article class="screen-card">
                 <div class="device-shell device-shell--gallery">
-                  <img class="device-shell__screen" src="assets/images/wedcheese-guest-list.png" alt="WedCheese wedding guest list app with RSVP and dietary notes" loading="lazy" />
+                  <img class="device-shell__screen" src="assets/images/wedcheese-guest-list.png" alt="WedCheese guest list and RSVP tracker screen" loading="lazy" />
                 </div>
                 <h3>Guest list &amp; RSVP</h3>
                 <p>Track attendance, plus-ones, meal notes, and guest details without spreadsheet chaos.</p>
               </article>
               <article class="screen-card">
                 <div class="device-shell device-shell--gallery">
-                  <img class="device-shell__screen" src="assets/images/wedcheese-saved-screen.png" alt="WedCheese saved wedding vendors, schedule notes, and planning binder" loading="lazy" />
+                  <img class="device-shell__screen" src="assets/images/wedcheese-saved-screen.png" alt="WedCheese saved vendors and wedding notes binder" loading="lazy" />
                 </div>
                 <h3>Saved binder</h3>
                 <p>Keep vendors, schedule notes, ideas, and decisions together.</p>
               </article>
               <article class="screen-card">
                 <div class="device-shell device-shell--gallery">
-                  <img class="device-shell__screen" src="assets/images/wedcheese-premium-screen-sim.png" alt="WedCheese Premium AI wedding planner support options" loading="lazy" />
+                  <img class="device-shell__screen" src="assets/images/wedcheese-premium-screen-sim.png" alt="WedCheese premium AI support screen" loading="lazy" />
                 </div>
                 <h3>Premium AI support</h3>
                 <p>Use free daily AI credits or upgrade when planning gets busy.</p>
@@ -602,6 +659,10 @@
           <p class="site-footer__boilerplate">WedCheese is a free AI-powered wedding planning app available on iOS and Android. It features an intelligent AI assistant, an automated budget tracker, a digital guest list and RSVP manager, and a dynamic day-of timeline builder.</p>
         </div>
       </footer>
+
+      <div class="mobile-sticky-cta" role="region" aria-label="Download WedCheese">
+        <a class="mobile-sticky-cta__button" href="#download">Download WedCheese free</a>
+      </div>
     </div>
   </body>
 </html>
