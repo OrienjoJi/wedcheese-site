@@ -1,0 +1,42 @@
+# Renders blog posts when _content changes — added by GTM Agents (OrienjoJi/GTM Platform).
+# The GTM publisher commits blog/_content/{slug}.html + manifest.json; this workflow
+# runs the repo's existing render + index scripts and commits the generated pages,
+# which GitHub Pages then deploys. Rendered-output commits use the default
+# GITHUB_TOKEN, which never retriggers workflows — no loop is possible (belt:
+# the paths filter below only watches _content).
+name: Render blog
+
+on:
+  push:
+    branches: [main]
+    paths: ["blog/_content/**"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-blog
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Render posts from _content + manifest
+        run: node scripts/render-blog-post.mjs --all
+      - name: Regenerate blog index + sitemap
+        run: node scripts/generate-blog-index.mjs
+      - name: Commit rendered pages
+        run: |
+          git config user.name "gtm-agents[bot]"
+          git config user.email "gtm-agents@users.noreply.github.com"
+          git add blog sitemap.xml
+          git diff --cached --quiet || git commit -m "blog: render generated posts [gtm-agents]"
+          git push
+      - name: Notify IndexNow (best effort)
+        run: node scripts/notify-indexnow.js || true
