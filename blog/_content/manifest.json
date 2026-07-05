@@ -1,5 +1,22 @@
 [
   {
+    "slug": "wedcheese-ai-wedding-planner-app",
+    "seoTitle": "WedCheese: AI Wedding Planner for iOS & Android",
+    "metaDescription": "Plan your wedding with WedCheese: AI-powered checklists, budget tracking, guest lists, and vendor management. Download free on iOS and Android.",
+    "h1": "WedCheese: AI Wedding Planner for iOS & Android",
+    "category": "AI Wedding Planning",
+    "categoryKey": "ai",
+    "primaryKeyword": "wedcheese: ai wedding planner for ios & android",
+    "datePublished": "2026-07-05",
+    "dateLabel": "Published July 2026",
+    "readTime": "~2 min read",
+    "ctaVariants": [
+      "general",
+      "ai"
+    ],
+    "faqs": []
+  },
+  {
     "slug": "best-ai-wedding-planner-apps-2026",
     "seoTitle": "Best AI Wedding Planner Apps in 2026",
     "metaDescription": "Compare the best AI wedding planner apps and learn what couples need for checklists, budgets, guests, RSVPs, vendors, decor, and planning decisions.",
@@ -11,7 +28,10 @@
     "dateModified": "2026-06-13",
     "dateLabel": "Published June 2026",
     "readTime": "~10 min read",
-    "ctaVariants": ["ai", "general"],
+    "ctaVariants": [
+      "ai",
+      "general"
+    ],
     "featured": true,
     "priority": 1,
     "faqs": [
@@ -43,7 +63,10 @@
     "primaryKeyword": "AI wedding planner vs ChatGPT",
     "datePublished": "2026-06-13",
     "dateLabel": "Published June 2026",
-    "ctaVariants": ["ai", "general"],
+    "ctaVariants": [
+      "ai",
+      "general"
+    ],
     "featured": true,
     "priority": 2,
     "faqs": [
@@ -72,7 +95,10 @@
     "datePublished": "2026-06-13",
     "dateLabel": "Updated June 2026",
     "readTime": "~12 min read",
-    "ctaVariants": ["checklist", "general"],
+    "ctaVariants": [
+      "checklist",
+      "general"
+    ],
     "featured": true,
     "priority": 3,
     "faqs": [
@@ -100,7 +126,10 @@
     "primaryKeyword": "6 month wedding checklist",
     "datePublished": "2026-06-13",
     "dateLabel": "Updated June 2026",
-    "ctaVariants": ["checklist", "general"],
+    "ctaVariants": [
+      "checklist",
+      "general"
+    ],
     "featured": true,
     "priority": 4,
     "faqs": [
@@ -123,7 +152,10 @@
     "categoryKey": "budget",
     "primaryKeyword": "average UK wedding cost 2026",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["budget", "general"],
+    "ctaVariants": [
+      "budget",
+      "general"
+    ],
     "priority": 5,
     "faqs": [
       {
@@ -145,7 +177,10 @@
     "categoryKey": "budget",
     "primaryKeyword": "wedding budget calculator",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["budget", "general"],
+    "ctaVariants": [
+      "budget",
+      "general"
+    ],
     "priority": 6,
     "faqs": [
       {
@@ -163,7 +198,10 @@
     "categoryKey": "budget",
     "primaryKeyword": "£15,000 wedding budget UK",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["budget", "general"],
+    "ctaVariants": [
+      "budget",
+      "general"
+    ],
     "featured": true,
     "priority": 7,
     "faqs": [
@@ -182,7 +220,10 @@
     "categoryKey": "rsvp",
     "primaryKeyword": "online wedding RSVP",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["rsvp", "general"],
+    "ctaVariants": [
+      "rsvp",
+      "general"
+    ],
     "featured": true,
     "priority": 8,
     "faqs": [
@@ -201,7 +242,10 @@
     "categoryKey": "rsvp",
     "primaryKeyword": "wedding guest list template",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["rsvp", "general"],
+    "ctaVariants": [
+      "rsvp",
+      "general"
+    ],
     "priority": 9,
     "faqs": []
   },
@@ -214,7 +258,10 @@
     "categoryKey": "decor",
     "primaryKeyword": "wedding decor checklist",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["decor", "general"],
+    "ctaVariants": [
+      "decor",
+      "general"
+    ],
     "priority": 10,
     "faqs": []
   },
@@ -227,7 +274,10 @@
     "categoryKey": "decor",
     "primaryKeyword": "wedding colour palette",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["decor", "general"],
+    "ctaVariants": [
+      "decor",
+      "general"
+    ],
     "priority": 11,
     "faqs": []
   },
@@ -240,7 +290,10 @@
     "categoryKey": "vendors",
     "primaryKeyword": "wedding vendor checklist",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["vendor", "general"],
+    "ctaVariants": [
+      "vendor",
+      "general"
+    ],
     "priority": 12,
     "faqs": []
   },
@@ -253,7 +306,10 @@
     "categoryKey": "vendors",
     "primaryKeyword": "questions to ask wedding venue",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["vendor", "general"],
+    "ctaVariants": [
+      "vendor",
+      "general"
+    ],
     "priority": 13,
     "faqs": []
   },
@@ -266,7 +322,10 @@
     "categoryKey": "checklist",
     "primaryKeyword": "wedding day timeline template",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["checklist", "general"],
+    "ctaVariants": [
+      "checklist",
+      "general"
+    ],
     "priority": 14,
     "faqs": []
   },
@@ -279,7 +338,10 @@
     "categoryKey": "budget",
     "primaryKeyword": "hidden wedding costs",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["budget", "general"],
+    "ctaVariants": [
+      "budget",
+      "general"
+    ],
     "priority": 15,
     "faqs": []
   },
@@ -292,7 +354,10 @@
     "categoryKey": "budget",
     "primaryKeyword": "wedding cost per guest",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["budget", "rsvp"],
+    "ctaVariants": [
+      "budget",
+      "rsvp"
+    ],
     "priority": 16,
     "faqs": []
   },
@@ -305,7 +370,10 @@
     "categoryKey": "etiquette",
     "primaryKeyword": "wedding RSVP reminder wording",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["rsvp", "general"],
+    "ctaVariants": [
+      "rsvp",
+      "general"
+    ],
     "priority": 17,
     "faqs": []
   },
@@ -318,7 +386,10 @@
     "categoryKey": "etiquette",
     "primaryKeyword": "adults only wedding wording",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["general", "rsvp"],
+    "ctaVariants": [
+      "general",
+      "rsvp"
+    ],
     "priority": 18,
     "faqs": []
   },
@@ -331,7 +402,10 @@
     "categoryKey": "etiquette",
     "primaryKeyword": "no plus one wedding wording",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["rsvp", "general"],
+    "ctaVariants": [
+      "rsvp",
+      "general"
+    ],
     "priority": 19,
     "faqs": []
   },
@@ -344,7 +418,10 @@
     "categoryKey": "decor",
     "primaryKeyword": "DIY wedding decor",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["decor", "budget"],
+    "ctaVariants": [
+      "decor",
+      "budget"
+    ],
     "priority": 20,
     "faqs": []
   },
@@ -357,7 +434,10 @@
     "categoryKey": "vendors",
     "primaryKeyword": "compare wedding vendor quotes",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["vendor", "budget"],
+    "ctaVariants": [
+      "vendor",
+      "budget"
+    ],
     "priority": 21,
     "faqs": []
   },
@@ -370,7 +450,10 @@
     "categoryKey": "budget",
     "primaryKeyword": "wedding deposit tracker",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["budget", "vendor"],
+    "ctaVariants": [
+      "budget",
+      "vendor"
+    ],
     "priority": 22,
     "faqs": []
   },
@@ -383,7 +466,10 @@
     "categoryKey": "checklist",
     "primaryKeyword": "what to do after getting engaged",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["checklist", "ai"],
+    "ctaVariants": [
+      "checklist",
+      "ai"
+    ],
     "featured": true,
     "priority": 23,
     "faqs": []
@@ -397,7 +483,10 @@
     "categoryKey": "checklist",
     "primaryKeyword": "wedding week checklist",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["checklist", "general"],
+    "ctaVariants": [
+      "checklist",
+      "general"
+    ],
     "priority": 24,
     "faqs": []
   },
@@ -410,7 +499,10 @@
     "categoryKey": "vendors",
     "primaryKeyword": "wedding vendor shortlist",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["vendor", "general"],
+    "ctaVariants": [
+      "vendor",
+      "general"
+    ],
     "priority": 25,
     "faqs": []
   },
@@ -423,7 +515,10 @@
     "categoryKey": "rsvp",
     "primaryKeyword": "wedding dietary requirements",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["rsvp", "general"],
+    "ctaVariants": [
+      "rsvp",
+      "general"
+    ],
     "priority": 26,
     "faqs": []
   },
@@ -436,7 +531,10 @@
     "categoryKey": "decor",
     "primaryKeyword": "wedding table decor ideas",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["decor", "budget"],
+    "ctaVariants": [
+      "decor",
+      "budget"
+    ],
     "priority": 27,
     "faqs": []
   },
@@ -449,7 +547,10 @@
     "categoryKey": "ai",
     "primaryKeyword": "AI wedding admin",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["ai", "general"],
+    "ctaVariants": [
+      "ai",
+      "general"
+    ],
     "priority": 28,
     "faqs": []
   },
@@ -462,7 +563,10 @@
     "categoryKey": "budget",
     "primaryKeyword": "wedding budget spreadsheet",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["budget", "general"],
+    "ctaVariants": [
+      "budget",
+      "general"
+    ],
     "priority": 29,
     "faqs": []
   },
@@ -475,7 +579,10 @@
     "categoryKey": "checklist",
     "primaryKeyword": "plan wedding without a planner",
     "datePublished": "2026-06-13",
-    "ctaVariants": ["checklist", "ai"],
+    "ctaVariants": [
+      "checklist",
+      "ai"
+    ],
     "priority": 30,
     "faqs": []
   },
@@ -526,7 +633,10 @@
     "datePublished": "2026-05-02",
     "dateModified": "2026-06-13",
     "dateLabel": "Updated June 2026",
-    "ctaVariants": ["ai", "general"],
+    "ctaVariants": [
+      "ai",
+      "general"
+    ],
     "legacy": true,
     "faqs": []
   },
@@ -541,7 +651,10 @@
     "datePublished": "2026-05-02",
     "dateModified": "2026-06-13",
     "dateLabel": "Updated June 2026",
-    "ctaVariants": ["ai", "vendor"],
+    "ctaVariants": [
+      "ai",
+      "vendor"
+    ],
     "legacy": true,
     "faqs": []
   },
@@ -556,7 +669,10 @@
     "datePublished": "2026-05-02",
     "dateModified": "2026-06-13",
     "dateLabel": "Updated June 2026",
-    "ctaVariants": ["rsvp", "general"],
+    "ctaVariants": [
+      "rsvp",
+      "general"
+    ],
     "legacy": true,
     "faqs": []
   },
@@ -571,7 +687,10 @@
     "datePublished": "2026-05-02",
     "dateModified": "2026-06-13",
     "dateLabel": "Updated June 2026",
-    "ctaVariants": ["vendor", "general"],
+    "ctaVariants": [
+      "vendor",
+      "general"
+    ],
     "legacy": true,
     "faqs": []
   },
@@ -586,7 +705,10 @@
     "datePublished": "2026-05-02",
     "dateModified": "2026-06-13",
     "dateLabel": "Updated June 2026",
-    "ctaVariants": ["ai", "budget"],
+    "ctaVariants": [
+      "ai",
+      "budget"
+    ],
     "legacy": true,
     "faqs": []
   },
@@ -601,7 +723,10 @@
     "datePublished": "2026-05-02",
     "dateModified": "2026-06-13",
     "dateLabel": "Updated June 2026",
-    "ctaVariants": ["vendor", "ai"],
+    "ctaVariants": [
+      "vendor",
+      "ai"
+    ],
     "legacy": true,
     "faqs": []
   }
