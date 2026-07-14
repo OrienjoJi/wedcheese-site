@@ -1,5 +1,22 @@
 [
   {
+    "slug": "ai-wedding-planner-engaged-couples",
+    "seoTitle": "AI Wedding Planner for Engaged Couples",
+    "metaDescription": "WedCheese is an all-in-one AI wedding planner that helps couples manage timelines, track budgets, and collect RSVPs with zero stress.",
+    "h1": "AI Wedding Planner for Engaged Couples",
+    "category": "AI Wedding Planning",
+    "categoryKey": "ai",
+    "primaryKeyword": "ai wedding planner for engaged couples",
+    "datePublished": "2026-07-14",
+    "dateLabel": "Published July 2026",
+    "readTime": "~2 min read",
+    "ctaVariants": [
+      "general",
+      "ai"
+    ],
+    "faqs": []
+  },
+  {
     "slug": "ai-marketing-agents-developers",
     "seoTitle": "AI Marketing Agents for Developers",
     "metaDescription": "Deploy AI marketing agents that draft blog articles and technical guides under deterministic safety gates. Focus on building while agents handle content.",
